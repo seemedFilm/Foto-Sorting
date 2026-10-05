@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>FotoSortierer</RootNamespace>
+    <AssemblyName>FotoSortierer</AssemblyName>
+    <Version>1.0.0</Version>
+    <!-- erlaubt das Bauen auch außerhalb von Windows (CI); unter Windows ohne Wirkung -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Liest EXIF (JPEG, HEIC, RAW, PNG, ...) und Video-Metadaten (MP4, MOV) -->
+    <PackageReference Include="MetadataExtractor" Version="2.8.1" />
+  </ItemGroup>
+
+</Project>
